@@ -146,6 +146,10 @@
 (setq amx-backend 'auto)
 (amx-mode 1)
 
+;; show-paren-mode ----------------
+(setq show-paren-delay 0)
+(show-paren-mode +1)
+
 ;; counsel ------------------------
 (define-key ctl-x-map (kbd "C-b") 'persp-switch-to-buffer)
 ;; (counsel-mode)
