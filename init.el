@@ -47,6 +47,12 @@
 (add-to-list 'default-frame-alist '(height . 40))
 (add-to-list 'default-frame-alist '(width . 115))
 
+;; Better scrolling experience
+(setq scroll-margin 0
+      scroll-conservatively 101 ; > 100
+      scroll-preserve-screen-position t
+      auto-window-vscroll nil)
+
 ;; Disable all GUI crap
 (tool-bar-mode 0)
 (menu-bar-mode 0)
