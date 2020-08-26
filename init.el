@@ -132,8 +132,14 @@
 ;; ido ----------------------------
 (setq ido-everywhere t
       ido-enable-flex-matching t)
+(defun bind-ido-keys ()
+  "Keybindings for ido mode."
+  (define-key ido-completion-map (kbd "C-n") 'ido-next-match) 
+  (define-key ido-completion-map (kbd "C-p") 'ido-prev-match))
+(add-hook 'ido-setup-hook #'bind-ido-keys)
 (ido-mode +1)
 (ido-ubiquitous-mode +1)
+(flx-ido-mode +1)
 (ido-yes-or-no-mode +1)
 
 ;; ivy ----------------------------
