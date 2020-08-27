@@ -124,6 +124,13 @@
   (evil-ex-define-cmd "q" #'kill-this-buffer)
   (evil-ex-define-cmd "wq" #'xm/save-and-kill-this-buffer))
 
+;; evil-collection- ---------------
+(evil-collection-init)
+
+;; evil-snipe ---------------------
+(setq evil-snipe-scope 'buffer)
+(evil-snipe-mode 1)
+
 ;; crux ---------------------------
 (define-key ctl-x-map (kbd "C-r") 'crux-recentf-find-file)
 (define-key ctl-x-map (kbd "C-_") 'crux-delete-file-and-buffer)
@@ -185,10 +192,6 @@
 
 ;; magit --------------------------
 (define-key ctl-x-map (kbd "g") 'magit-status)
-
-;; evil-snipe ---------------------
-(setq evil-snipe-scope 'buffer)
-(evil-snipe-mode 1)
 
 ;; olivetti -----------------------
 (setq olivetti-body-width 120)
